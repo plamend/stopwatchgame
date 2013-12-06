@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/StopWatchGame.iml" filepath="$PROJECT_DIR$/StopWatchGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stopwatchgame/stopwatchgame.iml" filepath="$PROJECT_DIR$/stopwatchgame/stopwatchgame.iml" />
+    </modules>
+  </component>
+</project>
+
