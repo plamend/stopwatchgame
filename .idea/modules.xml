@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/StopWatchGame.iml" filepath="$PROJECT_DIR$/StopWatchGame.iml" />
       <module fileurl="file://$PROJECT_DIR$/stopwatchgame/stopwatchgame.iml" filepath="$PROJECT_DIR$/stopwatchgame/stopwatchgame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stopwatchgame/stopwatchgame-stopwatchgame.iml" filepath="$PROJECT_DIR$/stopwatchgame/stopwatchgame-stopwatchgame.iml" />
     </modules>
   </component>
 </project>

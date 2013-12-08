@@ -1,22 +1,44 @@
 package net.wtfitio.stopwatchgame;
 
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends ActionBarActivity {
+
+    TextView text1;
+    TextView text2;
+    Button but;
+    int points;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        but = (Button)findViewById(R.id.click);
+        text1=(TextView)findViewById(R.id.output_time);
+        text2=(TextView)findViewById(R.id.output_points);
+        points = 0;
+
 
        /* if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
@@ -25,6 +47,37 @@ public class MainActivity extends ActionBarActivity {
         }*/
 
 
+        but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               String last_second=  getTimeStamp();
+                if (last_second.equals("0")) {
+                    points++;
+
+                    text2.setText(String.format("You have %d points",points));
+                }
+
+
+
+            }
+        });
+
+
+
+
+    }
+
+    private String getTimeStamp() {
+
+        Date now =  Calendar.getInstance().getTime();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.S");
+        SimpleDateFormat sdf_check = new SimpleDateFormat("S");
+        String date = sdf.format(now);
+        String data1=sdf_check.format(now);
+        text1.setText(date);
+
+        return data1;
 
     }
 
