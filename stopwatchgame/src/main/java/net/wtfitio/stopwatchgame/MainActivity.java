@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -26,6 +27,7 @@ public class MainActivity extends ActionBarActivity {
     TextView text2;
     Button but;
     int points;
+    Chronometer cron;
 
 
 
@@ -37,15 +39,18 @@ public class MainActivity extends ActionBarActivity {
         but = (Button)findViewById(R.id.click);
         text1=(TextView)findViewById(R.id.output_time);
         text2=(TextView)findViewById(R.id.output_points);
+        cron = (Chronometer)findViewById(R.id.chrono);
         points = 0;
-
-
+        long t =Calendar.getInstance().getTimeInMillis();
+        Log.v("time",String.valueOf(t));
+        cron.setBase(t);
+        cron.start();
        /* if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }*/
-
+//kkk
 
         but.setOnClickListener(new View.OnClickListener() {
             @Override

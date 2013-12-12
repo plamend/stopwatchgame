@@ -24,11 +24,18 @@
         android:layout_below="@+id/output_time"
         />
     <Button
+
         android:id="@+id/click"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
         android:text="click me"
         android:background="@android:color/holo_red_light"/>
+    <Chronometer
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/output_points"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
