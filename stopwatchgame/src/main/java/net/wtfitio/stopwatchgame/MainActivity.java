@@ -43,8 +43,8 @@ public class MainActivity extends ActionBarActivity {
         points = 0;
         long t =Calendar.getInstance().getTimeInMillis();
         Log.v("time",String.valueOf(t));
-        cron.setBase(t);
-        cron.start();
+        //cron.setBase(t);
+        //cron.start();
        /* if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
